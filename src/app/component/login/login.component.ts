@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {LoginService} from '../../service/login.service';
 import {User} from '../../model/User';
 
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
    * login with the given credentials
    */
   public login() : void {
-  this.loginService.login(this.user).subscribe((result : any)=>{
+  this.loginService.login(this.user).subscribe(()=>{
     // navigate to the next page
   } ,
     (error)=>{
